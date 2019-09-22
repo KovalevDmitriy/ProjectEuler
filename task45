@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp14
+{
+    class Program
+    {
+        static void Main()
+        {
+            var hexogonalIndex = 144;
+            long hexogonalNumber;
+            for (int i; ;hexogonalIndex++)
+            {
+                hexogonalNumber = hexogonalIndex * (2 * hexogonalIndex - 1);
+                var pentagonalNumber = ((1.0 + Math.Sqrt(1.0 + 24.0 * hexogonalNumber)) / 6.0);
+                if (pentagonalNumber % 1 == 0)
+                    break;
+            }
+            Console.WriteLine(hexogonalNumber);
+            Console.ReadKey();
+        }
+    }
+}
